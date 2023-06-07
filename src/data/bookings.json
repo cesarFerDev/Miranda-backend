@@ -1,0 +1,238 @@
+[
+  {
+    "id": "00001",
+    "guest_name": "Samantha Wilson",
+    "guest_email": "samantha.wilson@example.com",
+    "guest_contact": "+1 (555) 123-4567",
+    "order_date": "2022-01-14",
+    "check_in": "2022-01-19",
+    "check_out": "2022-01-24",
+    "special_request": "I would like a room with a balcony and a view of the city skyline.",
+    "room": {
+      "room_id": "00074",
+      "type": "Single Bed",
+      "number": "074",
+      "price": 145,
+      "discount": 0,
+      "cancellation": "Free cancellation up to 24 hours before check-in.",
+      "description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Hairdryer"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": true
+    },
+    "status": "Check In"
+  },
+  {
+    "id": "00002",
+    "guest_name": "John Smith",
+    "guest_email": "john.smith@example.com",
+    "guest_contact": "555-1234",
+    "order_date": "2020-11-04",
+    "check_in": "2020-11-09",
+    "check_out": "2020-11-11",
+    "special_request": "I would like a room with a view of the ocean",
+    "room": {
+      "room_id": "00023",
+      "type": "Double Bed",
+      "number": "023",
+      "price": 190,
+      "discount": 10,
+      "cancellation": "Free cancellation up to 48 hours before check-in.",
+      "description": "This spacious room features a comfortable double bed, a sofa, and a private balcony with a city view. Perfect for couples or small families.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Safe",
+        "Iron and ironing board",
+        "Bathrobe and slippers"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": true
+    },
+    "status": "Check Out"
+  },
+  {
+    "id": "00003",
+    "guest_name": "Alice Smith",
+    "guest_email": "alice.smith@example.com",
+    "guest_contact": "+1 (555) 123-4567",
+    "order_date": "2022-05-04",
+    "check_in": "2022-05-07",
+    "check_out": "2022-05-11",
+    "special_request": "I would like a room with a view of the ocean.",
+    "room": {
+      "room_id": "00102",
+      "type": "Suite",
+      "number": "102",
+      "price": 200,
+      "discount": 15,
+      "cancellation": "Cancellation permitted up to 48 hours before check-in.",
+      "description": "This spacious room features a comfortable double bed, a sofa, and a private balcony with stunning views of the city.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Coffee maker",
+        "Ironing board",
+        "Bathrobe",
+        "Slippers"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": false
+    },
+    "status": "In progress"
+  },
+  {
+    "id": "34332",
+    "guest_name": "Samantha Wensen",
+    "guest_email": "samantha.wilson@example.com",
+    "guest_contact": "+1 (555) 123-4567",
+    "order_date": "2024-01-14",
+    "check_in": "2024-01-19",
+    "check_out": "2024-01-24",
+    "special_request": "I would like a room with a balcony and a view of the city skyline.",
+    "room": {
+      "room_id": "00074",
+      "type": "Single Bed",
+      "number": "074",
+      "price": 145,
+      "discount": 0,
+      "cancellation": "Free cancellation up to 24 hours before check-in.",
+      "description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Hairdryer"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": true
+    },
+    "status": "Check In"
+  },
+  {
+    "id": "66052",
+    "guest_name": "Samantha Wensen",
+    "guest_email": "samantha@mail.com",
+    "guest_contact": "+1 (555) 123-4567",
+    "order_date": "2025-01-14",
+    "check_in": "2025-01-19",
+    "check_out": "2025-01-24",
+    "special_request": "I would like a room with a balcony and a view of the city skyline.",
+    "room": {
+      "room_id": "00074",
+      "type": "Single Bed",
+      "number": "125",
+      "price": 145,
+      "discount": 0,
+      "cancellation": "Free cancellation up to 24 hours before check-in.",
+      "description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Hairdryer"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": true
+    },
+    "status": "Check In"
+  },
+  {
+    "id": "84721",
+    "guest_name": "Samantha Wensen",
+    "guest_email": "samantha@mail.com",
+    "guest_contact": "+1 (555) 123-4567",
+    "order_date": "2025-01-14",
+    "check_in": "2025-01-19",
+    "check_out": "2025-01-24",
+    "special_request": "I would like a room with a balcony and a view of the city skyline.",
+    "room": {
+      "room_id": "00074",
+      "type": "Single Bed",
+      "number": "125",
+      "price": 145,
+      "discount": 0,
+      "cancellation": "Free cancellation up to 24 hours before check-in.",
+      "description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Hairdryer"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": true
+    },
+    "status": "Check In"
+  },
+  {
+    "id": "80297",
+    "guest_name": "Samantha Wensen",
+    "guest_email": "samantha@mail.com",
+    "guest_contact": "+1 (555) 123-4567",
+    "order_date": "2025-01-14",
+    "check_in": "2025-01-19",
+    "check_out": "2025-01-24",
+    "special_request": "I would like a room with a balcony and a view of the city skyline.",
+    "room": {
+      "room_id": "00074",
+      "type": "Single Bed",
+      "number": "125",
+      "price": 145,
+      "discount": 0,
+      "cancellation": "Free cancellation up to 24 hours before check-in.",
+      "description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+      "amenities": [
+        "Free Wi-Fi",
+        "Air conditioning",
+        "Flat-screen TV",
+        "Mini-fridge",
+        "Hairdryer"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+      ],
+      "available": true
+    },
+    "status": "Check In"
+  }
+]

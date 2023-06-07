@@ -1,0 +1,117 @@
+[
+  {
+    "room_id": "00074",
+    "room_type": "Single Bed",
+    "room_number": "074",
+    "price": 145,
+    "discount": 0,
+    "cancellation": "Free cancellation up to 24 hours before check-in.",
+    "room_description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+    "amenities": [
+      "Free Wi-Fi",
+      "Air conditioning",
+      "Flat-screen TV",
+      "Mini-fridge",
+      "Hairdryer"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+    ],
+    "available": "true"
+  },
+  {
+    "room_id": "00023",
+    "room_type": "Double Bed",
+    "room_number": "023",
+    "price": 190,
+    "discount": 10,
+    "cancellation": "Free cancellation up to 48 hours before check-in.",
+    "room_description": "This spacious room features a comfortable double bed, a sofa, and a private balcony with a city view. Perfect for couples or small families.",
+    "amenities": [
+      "Free Wi-Fi",
+      "Air conditioning",
+      "Flat-screen TV",
+      "Mini-fridge",
+      "Safe",
+      "Iron and ironing board",
+      "Bathrobe and slippers"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+    ],
+    "available": "true"
+  },
+  {
+    "room_id": "00102",
+    "room_type": "Suite",
+    "room_number": "102",
+    "price": 200,
+    "discount": 15,
+    "cancellation": "Cancellation permitted up to 48 hours before check-in.",
+    "room_description": "This spacious room features a comfortable double bed, a sofa, and a private balcony with stunning views of the city.",
+    "amenities": [
+      "Free Wi-Fi",
+      "Air conditioning",
+      "Flat-screen TV",
+      "Mini-fridge",
+      "Coffee maker",
+      "Ironing board",
+      "Bathrobe",
+      "Slippers"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+    ],
+    "available": "true"
+  },
+  {
+    "room_id": "80192",
+    "room_type": "Single Bed",
+    "room_number": "074",
+    "price": 145,
+    "discount": 0,
+    "cancellation": "Free cancellation up to 24 hours before check-in.",
+    "room_description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+    "amenities": [
+      "Free Wi-Fi",
+      "Air conditioning",
+      "Flat-screen TV",
+      "Mini-fridge",
+      "Hairdryer"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+    ],
+    "available": "true"
+  },
+  {
+    "room_id": "82390",
+    "room_type": "Single Bed",
+    "room_number": "074",
+    "price": 145,
+    "discount": 0,
+    "cancellation": "Free cancellation up to 24 hours before check-in.",
+    "room_description": "This cozy room features a comfortable single bed, a desk, and a private bathroom. Perfect for solo travelers or couples.",
+    "amenities": [
+      "Free Wi-Fi",
+      "Air conditioning",
+      "Flat-screen TV",
+      "Mini-fridge",
+      "Hairdryer"
+    ],
+    "photos": [
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1635350644128-c8e41eb8b2a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1623050804066-42bcedb4e81d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+    ],
+    "available": "true"
+  }
+]

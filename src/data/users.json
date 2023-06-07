@@ -1,0 +1,50 @@
+[
+  {
+    "user_id": "054831",
+    "photo": "https://f4.bcbits.com/img/0025239196_25.jpg",
+    "user_name": "Jekk0",
+    "job": "Manager",
+    "email": "jekkproducer@gmail.com",
+    "contact": "666666666",
+    "start_date": "2022-01-10",
+    "job_description": "Developing the dashboard for the hotel",
+    "user_status": "active",
+    "user_password": "1234"
+  },
+  {
+    "user_id": "721456",
+    "photo": "https://randomuser.me/api/portraits/women/6.jpg",
+    "user_name": "Mia Johnson",
+    "job": "Room Service",
+    "email": "mia.johnson@example.com",
+    "contact": "123-4567",
+    "start_date": "2022-01-10",
+    "job_description": "Responsible for developing and maintaining websites using HTML, CSS, and JavaScript.",
+    "user_status": "active",
+    "user_password": "s4G8fT#P7$"
+  },
+  {
+    "user_id": "458735",
+    "photo": "https://randomuser.me/api/portraits/men/10.jpg",
+    "user_name": "Dominic Mendez",
+    "job": "Receptionist",
+    "email": "dominic.mendez@example.com",
+    "contact": "123-4567",
+    "start_date": "2022-02-15",
+    "job_description": "Develop and maintain software applications and systems.",
+    "user_status": "active",
+    "user_password": "oB@}Wfy9XbQ<eB>z"
+  },
+  {
+    "user_id": "000023",
+    "photo": "https://randomuser.me/api/portraits/men/83.jpg",
+    "user_name": "John Doe",
+    "job": "Receptionist",
+    "email": "johndoe@example.com",
+    "contact": "123-4567",
+    "start_date": "2022-01-01",
+    "job_description": "Develop and maintain software applications",
+    "user_status": "active",
+    "user_password": "somerandompassword"
+  }
+]
