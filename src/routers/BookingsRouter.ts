@@ -1,7 +1,7 @@
 import express from "express";
 
-//const bookingsController = require("../controllers/bookingsController");
-const bookingsController = require("../controllers/bookingsController-mongo");
+const bookingsController = require("../controllers/bookingsController");
+//const bookingsController = require("../controllers/bookingsController-mongo");
 const bookingsRouter = express.Router();
 
 bookingsRouter.get("/", bookingsController.getAllBookings);

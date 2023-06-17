@@ -7,8 +7,7 @@
     "lint:tests": "npx eslint --ext .ts spec/",
     "start": "node -r module-alias/register ./dist --env=production",
     "dev": "nodemon ./src/index.ts",
-    "test": "nodemon --config ./spec/nodemon.json",
-    "test:no-reloading": "npx ts-node --files -r tsconfig-paths/register ./spec",
+    "test": "jest",
     "seed": "ts-node ./src/seed/seed.ts",
     "seed-mongo": "ts-node ./src/seed/seedMongo.ts"
   },
@@ -66,6 +65,7 @@
     "@types/find": "^0.2.1",
     "@types/fs-extra": "^11.0.1",
     "@types/jasmine": "^4.3.1",
+    "@types/jest": "^29.5.2",
     "@types/jsonfile": "^6.1.1",
     "@types/jsonwebtoken": "^9.0.2",
     "@types/morgan": "^1.9.4",
@@ -81,10 +81,12 @@
     "find": "^0.3.0",
     "fs-extra": "^11.1.1",
     "jasmine": "^4.6.0",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.22",
     "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }

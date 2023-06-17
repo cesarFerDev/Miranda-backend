@@ -1,56 +1,63 @@
 import { ContactModel, MongoContact } from "../../mongoSchemas/contactSchema";
 import { connection, disconnection } from "../../mongo/mongoConnector";
-import mongoose from "mongoose";
+import { idConverter } from "../bookingsRepository/bookingsRepository-mongo";
+import { Contact } from "@src/interfaces/interfaces";
 
 export const get = async() => {
     try {
-        await connection();
-        const contacts: MongoContact[] = await ContactModel.find().exec();
-        await disconnection();
-        return contacts;
+        //await connection();
+        const contacts = await ContactModel.find().exec();
+        const contactsToReturn = contacts.map(contact => idConverter(contact));
+        return contactsToReturn as Contact[];
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
 export const post = async(contactObject: MongoContact) => {
     try {
-        await connection();
+        //await connection();
         const newContact = new ContactModel(contactObject);
-        await disconnection();
-        return await newContact.save();
-        // const response = await ContactModel.collection.insertOne(contactObject);
-        // const newContact = await ContactModel.findOne()
-        //     .where('_id')
-        //     .equals(response.insertedId)
-        //     .exec();
-        // await disconnection();
-        // return newContact as MongoContact;
+        await newContact.save();
+        const contactToReturn = idConverter(newContact) as Contact;
+        return contactToReturn;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
 export const put = async(id: string) => {
     try {
-        await connection();
-        const idParse = new mongoose.Types.ObjectId(id);
-        const updatedContact = await ContactModel.findOneAndUpdate({_id: idParse}, {$set: {is_archived: true}}, {new: true});
-        await disconnection();
-        return updatedContact;
+        //await connection();
+        const updatedContact = await ContactModel.findOneAndUpdate({_id: id}, {$set: {is_archived: true}}, {new: true});
+        let contactToReturn: Contact | null = null;
+        if (updatedContact) {
+            contactToReturn = idConverter(updatedContact) as Contact;
+        };
+        return contactToReturn;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
-export const delContact = async(id: string) => {
-    try {
-        await connection();
-        const idParse = new mongoose.Types.ObjectId(id);
-        const contactDeleted = await ContactModel.findOneAndDelete({_id: idParse});
-        await disconnection();
-        return contactDeleted;
-    } catch (error) {
-        throw new Error(error);
-    }
-};
+// export const delContact = async(id: string) => {
+//     try {
+//         await connection();
+//         const idParse = new mongoose.Types.ObjectId(id);
+//         const contactDeleted = await ContactModel.findOneAndDelete({_id: idParse});
+//         return contactDeleted;
+//     } catch (error) {
+//         throw new Error(error);
+//     } finally {
+//         await disconnection();
+//     }
+// };

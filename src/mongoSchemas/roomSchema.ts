@@ -35,7 +35,7 @@ const roomSchema = new Schema({
         type: Boolean,
         required: true
     }
-});
+}, {versionKey: false});
 
 export interface MongoRoom extends InferSchemaType<typeof roomSchema>{};
 

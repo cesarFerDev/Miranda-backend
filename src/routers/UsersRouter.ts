@@ -1,6 +1,6 @@
 import {Router} from "express";
-//const usersController = require("../controllers/usersController");
-const usersController = require("../controllers/usersController-mongo");
+const usersController = require("../controllers/usersController");
+//const usersController = require("../controllers/usersController-mongo");
 const usersRouter = Router();
 
 usersRouter.get("/", usersController.getAllUsers);

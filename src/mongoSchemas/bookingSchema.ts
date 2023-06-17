@@ -27,10 +27,10 @@ const bookingSchema = new Schema({
     },
     special_request: {
         type: String,
-        required: false
+        default: ""
     },
     room_id: {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: 'Room',
         required: true
     },
@@ -39,7 +39,7 @@ const bookingSchema = new Schema({
         enum: ['Check In', 'Check Out', 'In Progress'],
         required: true
     }
-});
+}, {versionKey: false});
 
 export interface MongoBooking extends InferSchemaType<typeof bookingSchema>{};
 

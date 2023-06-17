@@ -1,70 +1,87 @@
 import { RoomModel, MongoRoom } from "../../mongoSchemas/roomSchema";
 import { connection, disconnection } from "../../mongo/mongoConnector";
-import mongoose from "mongoose";
+import { idConverter } from "../bookingsRepository/bookingsRepository-mongo";
+import { Room } from "@src/interfaces/interfaces";
 
 export const get = async() => {
     try {
-        await connection();
-        const rooms: MongoRoom[] = await RoomModel.find().exec();
-        await disconnection();
-        return rooms;
+        //await connection();
+        const rooms = await RoomModel.find().exec();
+        const roomsToReturn = rooms.map(room => idConverter(room));
+        return roomsToReturn as Room[] ;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
 export const getSingleRoom = async(id: string) => {
     try {
-        await connection();
-        const idParse = new mongoose.Types.ObjectId(id);
+        //await connection();
         const room = await RoomModel.findOne()
             .where('_id')
-            .equals(idParse)
+            .equals(id)
             .exec();
-        await disconnection();
-        return room;
+        let roomToReturn: Room | null = null;
+        if (room) {
+            roomToReturn = idConverter(room) as Room;
+        };
+        return roomToReturn;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
 export const post = async(roomObject: MongoRoom) => {
     try {
-        await connection();
+        //await connection();
         const newRoom = new RoomModel(roomObject);
-        await disconnection();
-        return await newRoom.save();
-        // const response = await RoomModel.collection.insertOne(roomObject);
-        // const newRoom = await RoomModel.findOne()
-        //     .where('_id')
-        //     .equals(response.insertedId)
-        //     .exec();
-        // await disconnection();
-        // return newRoom as MongoRoom;
+        await newRoom.save();
+        const roomToReturn = idConverter(newRoom) as Room;
+        return roomToReturn;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
 export const put = async(id: string, updateInfo: Partial<MongoRoom>) => {
     try {
-        await connection();
-        const idParse = new mongoose.Types.ObjectId(id);
-        const updatedRoom = await RoomModel.findOneAndUpdate({_id: idParse}, {$set: updateInfo}, {new: true});
-        return updatedRoom;
+        //await connection();
+        const updatedRoom = await RoomModel.findOneAndUpdate({_id: id}, {$set: updateInfo}, {new: true});
+        let roomToReturn: Room | null = null;
+        if (updatedRoom) {
+            roomToReturn = idConverter(updatedRoom) as Room;
+        };
+        return roomToReturn;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };
 
 export const delRoom = async(id: string) => {
     try {
-        await connection();
-        const idParse = new mongoose.Types.ObjectId(id);
-        const roomDeleted = await RoomModel.findOneAndDelete({_id: idParse});
-        await disconnection();
-        return roomDeleted;
+        //await connection();
+        const roomDeleted = await RoomModel.findOneAndDelete({_id: id});
+        let roomToReturn: Room | null = null;
+        if (roomDeleted) {
+            roomToReturn = idConverter(roomDeleted) as Room;
+        };
+        return roomToReturn;
     } catch (error) {
         throw new Error(error);
     }
+    //  finally {
+    //     await disconnection();
+    // }
 };

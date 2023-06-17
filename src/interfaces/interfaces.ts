@@ -1,4 +1,9 @@
-import { ObjectId } from "mongoose"
+
+export interface RoomSimple {
+    id: string,
+    type: 'Single Bed' | 'Double Bed' | 'Double Superior' | 'Suite',
+    number: string 
+}
 
 export interface Booking {
     id?: string,
@@ -9,7 +14,7 @@ export interface Booking {
     check_in: string,
     check_out: string,
     special_request: string,
-    room_id: string,
+    room: Room,
     status: 'Check In' | 'Check Out' | 'In Progress'
 }
 

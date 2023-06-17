@@ -11,7 +11,7 @@ const userSchema = new Schema({
     },
     job: {
         type: String,
-        enum: ['Manager', 'Recepcionist', 'Room Service'],
+        enum: ['Manager', 'Receptionist', 'Room Service'],
         required: true
     },
     email: {
@@ -38,7 +38,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     }
-});
+}, {versionKey: false});
 
 export interface MongoUser extends InferSchemaType<typeof userSchema>{};
 

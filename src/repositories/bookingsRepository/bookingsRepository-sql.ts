@@ -2,6 +2,7 @@ import { RowDataPacket } from "mysql2";
 import { Booking } from "../../interfaces/interfaces";
 import { connection } from "../../sql/mysqlConnector";
 import { v4 } from 'uuid';
+import { MongoBooking } from "@src/mongoSchemas/bookingSchema";
 
 export const get = async() => {
     try {
@@ -23,7 +24,7 @@ export const getSingleBooking = async(id: string) => {
     }
 };
 
-export const post = async(bookingObject: Booking) => {
+export const post = async(bookingObject: any) => {
     try {
         const con = await connection();
         bookingObject.id = v4().substring(0, 8);

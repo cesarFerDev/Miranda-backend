@@ -1,20 +1,11 @@
 import {Request, Response} from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import { Room } from '../interfaces/interfaces';
-import {get, getSingleRoom, post, put, delRoom} from "../repositories/roomsRepository/roomsRepository-sql";
+//import {get, getSingleRoom, post, put, delRoom} from "../repositories/roomsRepository/roomsRepository-sql";
+import {get, getSingleRoom, post, put, delRoom} from "../repositories/roomsRepository/roomsRepository-mongo";
 import Joi from 'joi';
 
-// const checkArrayType = (array: any[],type: string) => {
-
-//     for (let i = 0; i < array.length; i++) {
-//         if (typeof array[i] !== type) {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-
-const bookingSchema = Joi.object({
+const roomSchema = Joi.object({
     type: Joi.string()
         .valid('Single Bed', 'Double Bed', 'Double Superior', 'Suite')
         .required(),
@@ -82,11 +73,13 @@ exports.postRoom = expressAsyncHandler(async(req: Request<{}, Room, Room>, res: 
     
     try {
         const newRoom = req.body;
-        if (bookingSchema.validate(newRoom)) {
-            await post(newRoom);
-            res.send(newRoom);
+        if (roomSchema.validate(newRoom)) {
+            const roomToReturn = await post(newRoom);
+            res.send(roomToReturn);
+        } else {
+            res.status(400).send("Invalid data input");
         }
-        res.status(400).send("Invalid data input");
+        
     } catch (error) {
         res.status(500).send(error);
     }
@@ -114,8 +107,13 @@ exports.deleteRoom = expressAsyncHandler(async(req: Request<{id: string}>, res: 
     
     try {
         const id = req.params.id;
-        await delRoom(id);
-        res.send(id);
+        const roomDeleted = await delRoom(id);
+        if (roomDeleted) {
+            res.send(id);
+        } else {
+            res.status(404).send("Room not found");
+        }
+        
     } catch (error) {
         res.status(500).send(error);
     }

@@ -30,7 +30,7 @@ const contactSchema = new Schema({
         type: Boolean,
         required: true
     }
-});
+}, {versionKey: false});
 
 export interface MongoContact extends InferSchemaType<typeof contactSchema>{};
 

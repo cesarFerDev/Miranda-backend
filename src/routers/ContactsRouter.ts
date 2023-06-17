@@ -1,7 +1,7 @@
 import express from "express";
 
-//const contactsController = require("../controllers/contactsController");
-const contactsController = require("../controllers/contactsController-mongo");
+const contactsController = require("../controllers/contactsController");
+//const contactsController = require("../controllers/contactsController-mongo");
 const contactsRouter = express.Router();
 
 contactsRouter.get("/", contactsController.getAllContacts);

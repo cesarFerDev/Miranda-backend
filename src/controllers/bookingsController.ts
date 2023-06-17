@@ -1,16 +1,17 @@
 import {Request, Response} from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import { Booking } from '../interfaces/interfaces';
-import {get, getSingleBooking, post, put, delBooking} from "../repositories/bookingsRepository/bookingsRepository-sql";
+//import {get, getSingleBooking, post, put, delBooking} from "../repositories/bookingsRepository/bookingsRepository-sql";
 //import {get, getSingleBooking, post, put, delBooking} from "../repositories/bookingsRepository/bookingsRepository";
-//import {get, getSingleBooking, post, put, delBooking} from "../repositories/bookingsRepository/bookingsRepository-mongo";
+import {get, getSingleBooking, post, put, delBooking} from "../repositories/bookingsRepository/bookingsRepository-mongo";
 import Joi from "joi";
 import 'dotenv/config';
+import { MongoBooking } from '@src/mongoSchemas/bookingSchema';
 
 const validateBookingDates = (order: string, check_in: string, check_out: string) => {
     const limitDate = new Date().getTime();
-    if ((Date.parse(check_in) > limitDate && check_in >= order) && 
-        (Date.parse(check_out) > limitDate && check_out > check_in)) {
+    if ((Date.parse(check_in) > limitDate && Date.parse(check_in) >= Date.parse(order)) && 
+        (Date.parse(check_out) > limitDate && Date.parse(check_out) > Date.parse(check_in))) {
         return true;
     }
     return false;
@@ -75,14 +76,18 @@ exports.getBooking = expressAsyncHandler(async(req: Request<{id: string}>, res: 
 });
 
 //Create a single Booking
-exports.postBooking = expressAsyncHandler(async(req: Request<{}, Booking, Booking>, res: Response) => {
+exports.postBooking = expressAsyncHandler(async(req: Request<{}, Booking, MongoBooking>, res: Response) => {
     
     try {
         const newBooking = req.body;
         if (bookingSchema.validate(newBooking) && 
             validateBookingDates(newBooking.order_date, newBooking.check_in, newBooking.check_out)) {
-            await post(newBooking);
-            res.send(newBooking);
+            const bookingToReturn = await post(newBooking);
+            if (bookingToReturn) {
+                res.send(bookingToReturn);
+            } else {
+                res.status(404).send("Room doesn't exist");
+            }
         } else {
             res.status(400).send("Invalid data input");
         }
@@ -114,8 +119,13 @@ exports.deleteBooking = expressAsyncHandler(async(req: Request<{id: string}>, re
     
     try {
         const id = req.params.id;
-        await delBooking(id);
-        res.send(id);
+        const bookingDeleted = await delBooking(id);
+        if (bookingDeleted) {
+            res.send(id);
+        } else {
+            res.status(404).send("Booking not found");
+        }
+        
     } catch (error) {
         res.status(500).send(error);
     }

@@ -2,9 +2,9 @@ import {Request, Response} from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import { User } from '../interfaces/interfaces';
 //import {get, getSingleUser, post, put, delUser} from "../repositories/users-repository";
-import {get, getSingleUser, post, put, delUser} from "../repositories/usersRepository/usersRepository-sql";
+//import {get, getSingleUser, post, put, delUser} from "../repositories/usersRepository/usersRepository-sql";
+import {get, getSingleUser, post, put, delUser} from "../repositories/usersRepository/usersRepository-mongo";
 import Joi from 'joi';
-
 
 const userSchema = Joi.object({
     photo: Joi.string()
@@ -56,7 +56,6 @@ exports.getSingleUser = expressAsyncHandler(async(req: Request<{id: string}>, re
         } else {
             res.status(404).send("User not found");
         }
-        res.send(user);
     } catch (error) {
         res.status(500).send(error);
     }
@@ -68,8 +67,9 @@ exports.postUser = expressAsyncHandler(async(req: Request<{}, User, User>, res: 
     try {
         const newUser = req.body;
         if (userSchema.validate(newUser)) {
-            await post(newUser);
-            res.send(newUser); 
+            
+            const userToReturn = await post(newUser);
+            res.send(userToReturn); 
         } else {
             res.status(400).send("Invalid data input");
         }
@@ -90,7 +90,6 @@ exports.putUser = expressAsyncHandler(async(req: Request<{id: string}, User, Par
         } else {
             res.status(404).send("User not found");
         }
-        res.send(updatedUser); 
     } catch (error) {
         res.status(500).send(error);
     }
@@ -101,8 +100,12 @@ exports.deleteUser = expressAsyncHandler(async(req: Request<{id: string}>, res: 
     
     try {
         const id = req.params.id;
-        await delUser(id);
-        res.send(id);
+        const userDeleted = await delUser(id);
+        if (userDeleted) {
+            res.send(id);
+        } else {
+            res.status(404).send("User not found");
+        }
     } catch (error) {
         res.status(500).send(error);
     }

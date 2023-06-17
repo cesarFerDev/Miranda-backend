@@ -6,15 +6,19 @@ import roomsRouter from './routers/RoomsRouter';
 import usersRouter from './routers/UsersRouter';
 import authRouter from './routers/authRouter';
 import publicRouter from './routers/publicRouter';
+import {connection as mongoConnection} from "./mongo/mongoConnector"
 import cors from "cors";
 import './auth/auth';
 import 'dotenv/config';
+import { createData } from './seed/seedMongo';
 
 
-const app = express();
+export const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+mongoConnection();
 
 app.use('/login', authRouter);
 app.use('/', publicRouter);
